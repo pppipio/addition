@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main(void)
+{
+	int a,b,sum;
+	cout<<"a=";
+	cin>>a;
+	cout<<"b=";
+	cin>>b;
+	sum=a+b;
+	cout<<"a与b的和为："<<sum<<'\n';
+	system("pause"); 
+	return 0;
+}
