@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+int main(void)
+{
+	cout<<"Student_Name";
+	system("pause");
+	return 0;
+}
