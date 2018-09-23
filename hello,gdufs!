@@ -1,0 +1,12 @@
+P:
+https://github.com/pppipio/addition/blob/master/addition
+
+P:
+#include <iostream>
+using namespace std;
+int main(void)
+{
+	cout<<"hello,gdufs!";
+	system("pause");
+	return 0;
+}
