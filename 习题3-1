@@ -1,0 +1,11 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int x, Y;
+	char a, b;
+	cin >> x >> a >> Y >> b;
+	cout <<"x="<< x << ',' <<"a=" << a << ',' <<"Y="<< Y << ',' <<"b=" << b << endl;
+	system("pause");
+	return 0;
+}
