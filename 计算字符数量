@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int letter=0,space=0,digit=0,others=0;
+    char c;
+    while((c=getchar())!='\n')
+    {
+        if(c==' ')
+        space++;
+        else if(c>='1'&&c<='9')
+        digit++;
+        else if((c>='a'&&c<='z')||c>='A'&&c<='Z')
+        letter++;
+        else others++;
+    }
+    cout<<"字母数有"<<letter<<"个"<<endl;
+    cout<<"空格数有"<<space<<"个"<<endl;
+    cout<<"数字数有"<<digit<<"个"<<endl;
+    cout<<"其他字符数有"<<others<<"个"<<endl;
+    return 0;
+}
