@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+void change(int n)
+{
+	if(n==0)
+	cout<<0;
+	else
+	{
+		change(n/2);
+		cout<<n%2;
+	}
+}
+int main()
+{
+	int a;
+	cout<<"请输入一个十进制数：";
+	cin>>a;
+	if(a==0)
+	   cout<<"0"<<endl;
+	else 
+	{
+		cout<<"二进制数为：";
+		change(a);
+	}
+	cout<<'\n';
+	return 0;
+}
