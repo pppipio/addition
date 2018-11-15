@@ -1,0 +1,64 @@
+#include<iostream>
+using namespace std;
+int averagea(int a[4])
+{
+	int A; 
+    A=(a[0]+a[1]+a[2]+a[3])/4;
+}
+int averageb(int b[4])
+{
+	int B;
+    B=(b[0]=b[1]+b[2]+b[3])/4;
+}
+int averagec(int c[4])
+{
+	int C;
+	C=(c[0]+c[1]+c[2]+c[3])/4;
+}
+int average1(int S1[3])
+{
+	int s1; 
+    s1=(S1[0]+S1[1]+S1[2])/3;
+}
+int average2(int S2[3])
+{
+	int s2;
+    s2=(S2[0]+S2[1]+S2[2])/3;
+}
+int average3(int S3[3])
+{
+	int s3;
+	s3=(S3[0]+S3[1]+S3[2])/3;
+}
+int average4(int S4[3])
+{
+	int s4;
+	s4=(S4[0]+S4[1]+S4[2])/3;
+} 
+int main()
+{
+	int a[4]={89,88,72,60};
+	int b[4]={78,99,80,70};
+	int c[4]={56,100,61,75};
+	int A,B,C;
+	A=averagea(a);
+	B=averageb(b);
+	C=averagec(c);
+	int S1[3]={89,78,56};
+	int S2[3]={88,99,100};
+	int S3[3]={72,80,61};
+	int S4[3]={60,70,75};
+	int s1,s2,s3,s4;
+	s1=average1(S1);
+	s2=average2(S2);
+	s3=average3(S3);
+	s4=average4(S4);
+	cout<<"          "<<'\t'<<"课程一"<<'\t'<<"课程二"<<'\t'<<"课程三"<<'\t'<<"个人平均分"<<endl; 
+	cout<<"学生1     "<<'\t'<<"89    "<<'\t'<<"78    "<<'\t'<<"56    "<<'\t'<<s1<<endl;
+	cout<<"学生2     "<<'\t'<<"88    "<<'\t'<<"99    "<<'\t'<<"100   "<<'\t'<<s2<<endl;
+	cout<<"学生3     "<<'\t'<<"72    "<<'\t'<<"80    "<<'\t'<<"61    "<<'\t'<<s3<<endl;
+	cout<<"学生4     "<<'\t'<<"60    "<<'\t'<<"70    "<<'\t'<<"75    "<<'\t'<<s4<<endl;
+	cout<<"课程平均分"<<'\t'<<A<<'\t'<<B<<'\t'<<C<<endl;
+	system("pause");
+	return 0;
+}
