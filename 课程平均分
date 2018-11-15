@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+int averagea(int a[4])
+{
+	int A; 
+    A=(a[0]+a[1]+a[2]+a[3])/4;
+}
+int averageb(int b[4])
+{
+	int B;
+    B=(b[0]=b[1]+b[2]+b[3])/4;
+}
+int averagec(int c[4])
+{
+	int C;
+	C=(c[0]+c[1]+c[2]+c[3])/4;
+}
+int main()
+{
+	int a[4]={89,88,72,60};
+	int b[4]={78,99,80,70};
+	int c[4]={56,100,61,75};
+	int A,B,C;
+	A=averagea(a);
+	B=averageb(b);
+	C=averagec(c);
+	cout<<"课程一的平均分为："<<A<<endl;
+	cout<<"课程二的平均分为："<<B<<endl;
+	cout<<"课程三的平均分为："<<C<<endl;
+	system("pause");
+	return 0;
+}
