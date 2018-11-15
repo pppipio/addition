@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+#define N 10
+void sort(int a[],int n)
+{
+	int i,j,p,t;
+	for(i=0;i<n-1;i++)
+	{
+		p=i;
+		for(j=i+1;j<n;j++)
+		    if(a[j]>a[p])  p=j;           //记下最大的数 
+	    if(p!=i)
+		{    t=a[p];a[p]=a[i];a[i]=t;     //最大值 
+	    }
+	}
+}
+int main()
+{
+	int a[10],i;
+	cout<<"请输入10个数:";
+	for(i=0;i<10;i++)
+	    cin>>a[i];
+	sort(a,N);
+	for(i=0;i<10;i++)
+	    cout<<a[i]<<'\t';
+	    cout<<endl;
+	    return 0;
+}
