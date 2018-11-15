@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+#include<cstring>
+int nums(char string[])
+{
+	int i,len,num=0;
+	len=strlen(string);
+	for(i=0;i<len;)
+	{
+		while(string[i]==' ')i++;
+		if(i<len) num++;
+		while(string[i]!=' '&&i<len) i++;
+	}
+	return num;
+}
+int main()
+{
+	char string[80];
+	int num;
+	cout<<"请输入一行字符：";
+	cin.getline(string,80);
+	num=nums(string);
+	cout<<"输入的字符串为："<<string<<endl;
+	cout<<"字符串中包含的单词个数为："<<num<<endl;
+	return 0;
+}
