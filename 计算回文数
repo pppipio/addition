@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+void huiwen(int number)
+{
+	int n=0;
+	int m=number;
+	while(m!=0)
+	{
+		n=n*10+m%10;
+		m=m/10;
+	}
+	if(n==number)
+	cout<<"该数字是回文数"<<endl;
+	else
+	cout<<"该数字不是回文数"<<endl;
+ } 
+ int main()
+ {
+	int number;
+	cout<<"请输入一个数字"<<endl;
+	while(cin>>number)
+	huiwen(number);
+	return 0;
+ }
