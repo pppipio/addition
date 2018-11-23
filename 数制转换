@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+void change(int n)
+{
+	if(n==0)
+	return;
+	else
+	{
+		change(n/16);
+		cout<<n%16;
+	}
+}
+int main()
+{
+	int a;
+	cout<<"输入十进制数："<<endl;
+	cin>>a;
+	if(a==0)
+	cout<<0<<endl;
+	else
+	{
+		change(a);
+	}
+	cout<<endl;
+	return 0;
+}
