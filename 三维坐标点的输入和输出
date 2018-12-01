@@ -1,0 +1,57 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+struct coordinate
+{
+	double x;
+	double y;
+	double z;
+};
+
+int main()
+{
+	void Print(coordinate x);
+	coordinate Input();
+	double distance(coordinate x,coordinate y);
+	coordinate a,b;
+	double dist;
+
+	cout<<"请输入第1个点的坐标:"<<endl;
+	a=Input();
+	cout<<"请输入第2个点的坐标:"<<endl;
+	b=Input();
+	dist=distance(a, b);
+	cout<<"第1个点的坐标:";
+	Print(a);
+	cout<<"第2个点的坐标:";
+	Print(b);
+	cout<<"这两点的距离为:"<<dist<<endl;
+	return 0;
+}
+
+coordinate Input()
+{
+	coordinate a;
+
+	cout<<"请输入该坐标的x点:";
+	cin>>a.x;
+	cout<<"请输入该坐标的y点:";
+	cin>>a.y;
+	cout<<"请输入该坐标的z点:";
+	cin>>a.z;
+	return a;
+}
+
+void Print(coordinate a)
+{
+	cout<<"("<<a.x<<","<<a.y<<","<<a.z<<")"<<endl;
+}
+
+double distance(coordinate a,coordinate b)
+{
+	double dist;
+
+	dist=sqrt((a.x-b.x)*(a.x-b.x)+(a.y-b.y)*(a.y-b.y)+(a.z-b.z)*(a.z-b.z));
+	return dist;
+}
