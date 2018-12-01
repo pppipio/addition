@@ -1,0 +1,16 @@
+#include <iostream>
+#include<iomanip>
+using namespace std;
+int main()
+{
+	int m,n;
+	enum week{sun,mon,tue,wed,thu,fri,sat} day ;
+	char weekday[7][7]={"星期日","星期一","星期二","星期三","星期四","星期五","星期六"};
+	cout << "输入今天是星期几：" << endl;
+	cin >> m;
+	cout<<"输入间隔天数："<<endl;
+	cin>>n;
+	day=week(m);
+	cout<<"今天是"<<weekday[day]<<","<<n<<"天后是"<<weekday[(day+n)%7]<<endl;
+	return 0;
+}
