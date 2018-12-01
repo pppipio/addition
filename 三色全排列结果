@@ -1,0 +1,43 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+	enum color {Red,Blue,Green};
+	color i,j,k,pri;
+	int n,loop;
+
+	n=0;
+	for(i=Red;i<=Green;i=color(int(i)+1))
+		for(j=Red;j<=Green;j=color(int(j)+1))
+			if(i!=j)
+			{
+				for (k=Red;k<=Green;k=color(int(k)+1))
+					if((k!=i)&&(k!=j))
+					{
+						n=n+1;
+						cout<<setw(4)<<n;
+						for(loop=1;loop<=3;loop++)
+						{
+							switch(loop)
+							{
+								case 1 : pri=i;break;
+								case 2 : pri=j;break;
+								case 3 : pri=k;break;
+								default:break;
+							}
+							switch (pri)
+							{
+								case Red: cout<<setw(10)<<"Red";break;
+								case Blue: cout<<setw(10)<<"Blue";break;
+								case Green: cout<<setw(10)<<"Green";break;
+								default:break;
+							}
+						}
+						cout<<endl;
+					}
+			}
+			cout<<setw(5)<<n;
+	return 0;
+}
