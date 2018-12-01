@@ -1,0 +1,58 @@
+#include <iostream>
+#include <cctype>
+using namespace std;
+
+int daytab[2][13]={{0,31,28,31,30,31,30,31,31,30,31,30,31},
+					{0,31,29,31,30,31,30,31,31,30,31,30,31}};
+struct data
+{
+	int year,month,day;
+}dt;
+
+int day_of_year(int year,int month,int day)
+{
+	int i,leap;
+
+	leap=((year%4==0&&year%100!=0)||year%400==0);
+	for(i=1;i<month;i++)
+		day+=daytab[leap][i];
+	return day;
+}
+
+void inver(char s[],int &year,int &month,int &day)
+{
+	int i=0;
+
+	while(isdigit(s[i]))
+	{
+		year=year*10+s[i]-'0';
+		i++;
+	}
+	i++;
+	while(isdigit(s[i]))
+	{
+		month=month*10+s[i]-'0';
+		i++;
+	}
+	i++;
+	while(isdigit(s[i])&&s[i])
+	{
+		day=day*10+s[i]-'0';
+		i++;
+	}
+}
+
+int main()
+{
+
+	char s[20];
+
+	cout<<"输入日期（年-月-日）：";
+	cin>>s;
+	dt.year=0;
+	dt.month=0;
+	dt.day=0;
+	inver(s,dt.year,dt.month,dt.day);
+	cout<<s<<"是"<<dt.year<<"年的第"<<day_of_year(dt.year,dt.month,dt.day)<<"天"<<endl;
+	return 0;
+}
