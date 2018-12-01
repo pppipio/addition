@@ -1,0 +1,69 @@
+#include <iostream>
+#include <iomanip>
+#include <cstring>
+using namespace std;
+
+#define N 4
+
+struct student
+{
+	char num[10];
+	char name[20];
+	int sc;
+};
+
+int main()
+{
+	void Input(student studs[],int n);
+	void Output(student studs[],int n);
+	int Max(student studs[],int n);
+	int i;
+	student studs[N];
+
+	Input(studs,N);
+	i=Max(studs,N);
+	Output(studs,N);
+	cout<<"最高分学生的学生信息为："<<endl;
+	cout<<setw(10)<<studs[i].num<<setw(10);
+	cout<<studs[i].name<<setw(10);
+	cout<<studs[i].sc<<setw(10)<<endl;
+	return 0;
+}
+
+void Input(student studs[],int n)
+{
+	int i;
+
+	for(i=0;i<n;i++)
+	{
+		cout<<"请输入第"<<i+1<<"名学生的学号:";
+		cin>>studs[i].num;
+		cout<<"请输入第"<<i+1<<"名学生的姓名:";
+		cin>>studs[i].name;
+		cout<<"请输入第"<<i+1<<"名学生的成绩:";
+		cin>>studs[i].sc;
+	}
+}
+
+void Output(student studs[],int n)
+{
+	int i;
+
+	cout<<setw(10)<<"学号"<<setw(10)<<"姓名"<<setw(10)<<"成绩"<<endl;
+	for(i=0;i<n;i++)
+	{
+		cout<<setw(10)<<studs[i].num<<setw(10);
+		cout<<studs[i].name<<setw(10);
+		cout<<studs[i].sc<<setw(10)<<endl;
+	}
+}
+int Max(student studs[],int n)
+{
+	int i,k;
+
+	k=0;
+	for(i=1;i<n-1;i++)
+		if(studs[k].sc<studs[i].sc)
+			k=i;
+	return k;
+}
