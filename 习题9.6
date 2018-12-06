@@ -1,0 +1,35 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+void select_max(char *p1, char *p2)
+{
+	char temp[100];
+	int maxlen = 0, len;
+	while (*p1)
+	{
+		while (*p1 == ' ') p1++;
+		len = 0;
+		while (*p1 != ' ' && *p1 != '\0')
+		{
+			*(temp + len) = *p1;
+			len++;
+			p1++;
+		}
+		*(temp + len) = '\0';
+		if (len>maxlen)
+		{
+			maxlen = len;
+			strcpy(p2, temp);
+		}
+	}
+}
+int main()
+{
+	char main_str[100], sub_str[50];
+
+	cout<< "Please input main string: ";
+	cin.getline(main_str, 100);
+	select_max(main_str, sub_str);
+	cout<<sub_str<<endl;
+	return 0;
+}
