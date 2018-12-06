@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+void select_odd_index(char *str1, char *str2)
+{
+	str1++;
+	while (*str1)
+	{
+		*str2 = *str1;
+		str2++;
+		str1++;
+		if (*str1 == '\0')break;
+		str1++;
+	}
+	*str2 = '\0';
+}
+int main()
+{
+	char str1[100], str2[50];
+	cout<< "Please input a string: ";
+	cin.getline(str1, 100);
+	select_odd_index(str1, str2);
+	cout<< str2 <<endl;
+	return 0;
+}
