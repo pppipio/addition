@@ -1,0 +1,102 @@
+#include <iostream>
+#include<cstring>
+using namespace std;
+class  Teacher
+{
+	char Num[80], Name[20], Addr[30], Tel[30], Email[30], Headship[30], Post[30];
+	char Sexy;
+	int Salary;
+	public:
+		void setName(char name[])
+		{
+		strcpy(Name,name);	
+		} 
+		void getName(char*name)
+		{
+			strcpy(name,Name);
+		}
+		void setNum(char num[])
+		{
+			strcpy(Num,num);
+		}
+		void getNum(char*num)
+		{
+			strcpy(num,Num);
+		}
+		void setAddr(char addr[])
+		{
+			strcpy(Addr,addr);
+		}
+		void getAddr(char*addr)
+		{
+			strcpy(addr,Addr);
+		}
+		void setTel(char tel[])
+		{
+			strcpy(Tel,tel);
+		}
+		void getTel(char*tel)
+		{
+			strcpy(tel,Tel);
+		}
+		void setEmail(char email[])
+		{
+			strcpy(Email,email);
+		}
+		void getEmail(char*email)
+		{
+			strcpy(email,Email);
+		}
+		void setHeadship(char headship[])
+		{
+			strcpy(Headship,headship);
+		}
+		void getHeadship(char*headship)
+		{
+			strcpy(headship,Headship);
+		}
+		void setPost(char post[])
+		{
+			strcpy(Post,post);
+		}
+		void getPost(char*post)
+		{
+			strcpy(post,Post);
+		}
+		void setSexy(char sexy)
+		{
+			Sexy=sexy;
+		}
+		void setSalary(int salary)
+		{
+			Salary=salary;
+		}
+	void OutputInfo();
+};
+void Teacher::OutputInfo()
+{
+	cout<<"Num:"<<Num<<endl;
+	cout<<"Name:"<<Name<<endl;
+	cout<<"Address:"<<Addr<<endl;
+	cout<<"Tel:"<<Tel<<endl;
+	cout<<"Email:"<<Email<<endl;
+	cout<<"Headship"<<Headship<<endl;
+	cout<<"Post:"<<Post<<endl;
+	cout<<"Sexy:"<<Sexy<<endl;
+	cout<<"Salary:"<<Salary<<endl;
+}
+int main()
+{
+	Teacher t;
+	t.setNum("2018");
+	t.setName("wang");
+	t.setAddr("beijing road");
+	t.setTel("12345678");
+	t.setEmail("wang 163.com");
+	t.setHeadship("Chinese teacher");
+	t.setPost("high");
+	t.setSexy('F');
+	t.setSalary(9999); 
+	t.OutputInfo();
+	return 0;
+} 
